@@ -15,9 +15,9 @@ jobs:
           api-key: ${{ secrets.DATADOG_API_KEY }}
           events: |
             - title: "Hello Datadog!"
-              text: "Hello from ${{ github.head_ref }}"
+              text: "Hello from ${{github.ref}}"
               alert_type: "info"
               host: ${{ github.repository_owner }}
               tags:
-                - "source: GITHUUB"
+                - "source:github"
                 - "project:${{ github.repository }}"
