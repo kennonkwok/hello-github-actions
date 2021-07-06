@@ -18,5 +18,6 @@ jobs:
               text: "Hello from ${{ github.head_ref }}"
               alert_type: "info"
               host: ${{ github.repository_owner }}
+              source: GITHUB
               tags:
                 - "project:${{ github.repository }}"
