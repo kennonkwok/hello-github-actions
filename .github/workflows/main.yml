@@ -10,7 +10,7 @@ jobs:
         with:
           MY_NAME: "Mona"
       - name: Datadog
-        uses: masci/datadog@v1
+        uses: kennonkwok/datadog
         with:
           api-key: ${{ secrets.DATADOG_API_KEY }}
           events: |
@@ -18,6 +18,6 @@ jobs:
               text: "Hello from ${{github.ref}}"
               alert_type: "info"
               host: ${{ github.repository_owner }}
+              source_type_name: "github"
               tags:
-                - "source:github"
                 - "project:${{ github.repository }}"
