@@ -10,7 +10,7 @@ jobs:
         with:
           MY_NAME: "Mona"
       - name: Datadog
-        uses: kennonkwok/datadog-actions@63ddec6150df06f2e111a99565ff5d4ea08b0631
+        uses: kennonkwok/datadog-actions@v1
         with:
           api-key: ${{ secrets.DATADOG_API_KEY }}
           events: |
