@@ -17,6 +17,7 @@ jobs:
             - title: "Hello Datadog!"
               text: "Hello from ${{github.ref}}"
               alert_type: "info"
+              source_name_type: "GITHUB"
               host: ${{ github.repository_owner }}
               tags:
                 - "project:${{ github.repository }}"
