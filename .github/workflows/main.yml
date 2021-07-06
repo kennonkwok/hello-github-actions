@@ -9,3 +9,14 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: "Mona"
+      - name: Datadog
+        uses: masci/datadog@v1
+        with:
+          api-key: ${{ secrets.DATADOG_API_KEY }}
+          events: |
+            - title: "Hello Datadog!"
+              text: "Hello from ${{ github.head_ref }}"
+              alert_type: "info"
+              host: ${{ github.repository_owner }}
+              tags:
+                - "project:${{ github.repository }}"
